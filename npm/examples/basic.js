@@ -16,7 +16,7 @@ const api = new anagrampuzzleAPI({
 // Example query
 var query = {
   word: "listen",
-  count: 5,
+  count: 1,
   difficulty: "medium"
 };
 
