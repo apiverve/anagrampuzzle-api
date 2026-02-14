@@ -12,21 +12,18 @@ namespace APIVerve.API.AnagramPuzzleGenerator
     {
         /// <summary>
         /// Specific word to create anagram for
-        /// Example: listen
         /// </summary>
         [JsonProperty("word")]
         public string Word { get; set; }
 
         /// <summary>
-        /// Number of puzzles (1-20)
-        /// Example: 5
+        /// Number of puzzles
         /// </summary>
         [JsonProperty("count")]
         public string Count { get; set; }
 
         /// <summary>
-        /// Difficulty: easy, medium, hard
-        /// Example: medium
+        /// Difficulty level
         /// </summary>
         [JsonProperty("difficulty")]
         public string Difficulty { get; set; }
