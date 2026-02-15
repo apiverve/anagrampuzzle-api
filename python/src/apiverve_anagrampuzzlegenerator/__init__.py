@@ -1,1 +1,3 @@
-from .apiClient import AnagrampuzzleAPIClient
+from .apiClient import AnagrampuzzleAPIClient, AnagrampuzzleAPIClientError
+
+__all__ = ['AnagrampuzzleAPIClient', 'AnagrampuzzleAPIClientError']
