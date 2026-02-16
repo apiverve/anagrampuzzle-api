@@ -44,7 +44,11 @@ from apiverve_anagrampuzzlegenerator.apiClient import AnagrampuzzleAPIClient
 # Initialize the client with your APIVerve API key
 api = AnagrampuzzleAPIClient("[YOUR_API_KEY]")
 
-query = { "word": "listen", "count": 1, "difficulty": "medium" }
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "word": "listen", "count": 1, "difficulty": "medium" }
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
 ```
 
 ###### Simple Request
@@ -169,7 +177,11 @@ from apiverve_anagrampuzzlegenerator.apiClient import AnagrampuzzleAPIClient, An
 
 api = AnagrampuzzleAPIClient("[YOUR_API_KEY]")
 
-query = { "word": "listen", "count": 1, "difficulty": "medium" }
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
 
 try:
     result = api.execute(query)
@@ -190,7 +202,11 @@ from apiverve_anagrampuzzlegenerator.apiClient import AnagrampuzzleAPIClient, An
 
 api = AnagrampuzzleAPIClient("[YOUR_API_KEY]")
 
-query = { "word": "listen", "count": 1, "difficulty": "medium" }
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
 
 try:
     result = api.execute(query)
@@ -224,7 +240,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_anagrampuzzlegenerator.apiClient import AnagrampuzzleAPIClient, AnagrampuzzleAPIClientError
 
-query = { "word": "listen", "count": 1, "difficulty": "medium" }
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
 
 # Using context manager ensures proper cleanup
 with AnagrampuzzleAPIClient("[YOUR_API_KEY]") as api:
@@ -250,7 +270,11 @@ from apiverve_anagrampuzzlegenerator.apiClient import AnagrampuzzleAPIClient
 # Enable debug mode
 api = AnagrampuzzleAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "word": "listen", "count": 1, "difficulty": "medium" }
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -265,8 +289,13 @@ from apiverve_anagrampuzzlegenerator.apiClient import AnagrampuzzleAPIClient
 
 api = AnagrampuzzleAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "word": "listen",
+    "count": 1,
+    "difficulty": "medium"
+}
+
 try:
-    query = { "word": "listen", "count": 1, "difficulty": "medium" }
     result = api.execute(query)
     print(result)
 finally:
