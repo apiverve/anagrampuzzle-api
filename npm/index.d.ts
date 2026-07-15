@@ -4,27 +4,46 @@ declare module '@apiverve/anagrampuzzle' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface anagrampuzzleResponse {
     status: string;
     error: string | null;
     data: AnagramPuzzleGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface AnagramPuzzleGeneratorData {
       puzzles:    Puzzle[];
-      count:      number;
-      difficulty: string;
-      html:       string;
+      count:      number | null;
+      difficulty: null | string;
+      html:       null | string;
+      image:      Image;
+  }
+  
+  interface Image {
+      imageName:   null | string;
+      format:      null | string;
+      downloadURL: null | string;
+      expires:     number | null;
   }
   
   interface Puzzle {
-      original:    string;
-      scrambled:   string;
-      anagrams:    string[];
-      letterCount: number;
-      hint:        string;
+      original:    null | string;
+      scrambled:   null | string;
+      anagrams:    (null | string)[];
+      letterCount: number | null;
   }
 
   export default class anagrampuzzleWrapper {
