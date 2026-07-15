@@ -30,7 +30,7 @@ class anagrampuzzleWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/anagrampuzzle';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"word":{"type":"string","required":false},"count":{"type":"integer","required":false,"min":1,"max":20,"default":1},"difficulty":{"type":"string","required":false,"default":"medium"}};
+        this.validationRules = {"word":{"type":"string","required":false},"count":{"type":"integer","required":false,"min":1,"max":20,"default":1},"difficulty":{"type":"string","required":false,"default":"medium"},"image":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
