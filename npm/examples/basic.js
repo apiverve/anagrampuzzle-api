@@ -17,7 +17,8 @@ const api = new anagrampuzzleAPI({
 var query = {
   word: "listen",
   count: 1,
-  difficulty: "medium"
+  difficulty: "medium",
+  image: false
 };
 
 // Make the API request using callback
