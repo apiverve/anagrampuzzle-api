@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/anagrampuzzle:
     get:
-      summary: Generate Anagram Puzzles
+      summary: Anagram Puzzle Generator
       description: Create anagram puzzles
       operationId: anagrampuzzle
       parameters:
@@ -158,8 +158,7 @@ paths:
                   image:
                     imageName: d52a76c7-fe99-498f-b616-ab376cc920a5_anagram.png
                     format: .png
-                    downloadURL: >-
-                      https://storage.googleapis.com/apiverve/APIData/anagrampuzzle/d52a76c7-fe99-498f-b616-ab376cc920a5_anagram.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766009991&Signature=cHugsZLx%2BpnY0TrRpTdO%2Bfh48%2Bw8E1zzZt3SNLI2dNgM%2BZj%2FiC%2FZZjvoyahZdBlBkz6pHxuLRX55%2FLszTxTxyhNLJzUcjDOCjoATtWKevbzyLmwaEyFXLDjdzikxUWjVt9g8MyiPEKSFK6%2BpgY6WCvvSeI%2Fox%2B6lQawatWFMB7k0OKSTr9FO%2Fhqqu5M4%2B37bW0zvBuNtcORufXKayE7Z2KcW%2F2wkk9YwGXrVIvn2xLcOYjdY49GAQ2HW0qxRHLDtYYMY6T32jKz1KC6KBLZzrji7v3N%2FVkxfbECzXNgZB5WcCisCoHrUyj7BO14lLr7ZC4XttlYe70ak4QTqa3qNCw%3D%3D
+                    downloadURL: https://storage.googleapis.com/apiverve/APIData/anagrampuzzle/d52a76c7-fe99-498f-b616-ab376cc920a5_anagram.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766009991&Signature=cHugsZLx%2BpnY0TrRpTdO%2Bfh48%2Bw8E1zzZt3SNLI2dNgM%2BZj%2FiC%2FZZjvoyahZdBlBkz6pHxuLRX55%2FLszTxTxyhNLJzUcjDOCjoATtWKevbzyLmwaEyFXLDjdzikxUWjVt9g8MyiPEKSFK6%2BpgY6WCvvSeI%2Fox%2B6lQawatWFMB7k0OKSTr9FO%2Fhqqu5M4%2B37bW0zvBuNtcORufXKayE7Z2KcW%2F2wkk9YwGXrVIvn2xLcOYjdY49GAQ2HW0qxRHLDtYYMY6T32jKz1KC6KBLZzrji7v3N%2FVkxfbECzXNgZB5WcCisCoHrUyj7BO14lLr7ZC4XttlYe70ak4QTqa3qNCw%3D%3D
                     expires: 1766009991438
         '401':
           description: Your request was not authorized, or your API Key was invalid
