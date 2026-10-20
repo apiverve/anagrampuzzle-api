@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,9 +24,10 @@ class ValidationError(AnagrampuzzleAPIClientError):
 class AnagrampuzzleAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "word": {"type": "string", "required": False},
+        "word": {"type": "string", "required": False, "maxLength": 60},
         "count": {"type": "integer", "required": False, "min": 1, "max": 20, "default": 1},
-        "difficulty": {"type": "string", "required": False, "default": "medium"}
+        "difficulty": {"type": "string", "required": False, "default": "medium"},
+        "image": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns
