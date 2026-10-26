@@ -5,7 +5,7 @@ Anagram Puzzle Generator creates word puzzles where players rearrange scrambled 
 [![pub package](https://img.shields.io/pub/v/apiverve_anagrampuzzle.svg)](https://pub.dev/packages/apiverve_anagrampuzzle)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Anagram Puzzle Generator API](https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Anagram Puzzle Generator API](https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_anagrampuzzle: ^1.1.14
+  apiverve_anagrampuzzle: ^1.2.3
 ```
 
 Then run:
@@ -36,7 +36,8 @@ void main() async {
     final response = await client.execute({
       'word': 'listen',
       'count': 1,
-      'difficulty': 'medium'
+      'difficulty': 'medium',
+      'image': true
     });
 
     print('Status: ${response.status}');
@@ -56,66 +57,70 @@ void main() async {
   "data": {
     "puzzles": [
       {
-        "original": "LATIGO",
-        "scrambled": "TIAGLO",
+        "original": "DESPAIR",
+        "scrambled": "PDAISRE",
         "anagrams": [
-          "GALIOT"
+          "ASPIRED",
+          "DIAPERS"
         ],
-        "letterCount": 6,
-        "hint": "A strap for tightening a saddle girth. [Western U. S. & Sp. Amer.]"
+        "letterCount": 7
       },
       {
-        "original": "INSTAR",
-        "scrambled": "IATRNS",
+        "original": "GREATS",
+        "scrambled": "RSGETA",
         "anagrams": [
-          "STRAIN"
+          "GASTER",
+          "GATERS",
+          "GRATES"
         ],
-        "letterCount": 6,
-        "hint": "To stud as with stars. [R.] \"A golden throne instarred with gems.\" J. Barlow."
+        "letterCount": 6
       },
       {
-        "original": "WARISH",
-        "scrambled": "SIRAWH",
+        "original": "GROANS",
+        "scrambled": "SOGNRA",
         "anagrams": [
-          "RAWISH"
+          "ARGONS"
         ],
-        "letterCount": 6,
-        "hint": "To protect from the effects of; hence, to cure; to heal. [Obs.] My brother shall"
+        "letterCount": 6
       },
       {
-        "original": "IRONISH",
-        "scrambled": "INORHIS",
+        "original": "BARGEES",
+        "scrambled": "ABEREGS",
         "anagrams": [
-          "ROINISH"
+          "BAREGES"
         ],
-        "letterCount": 7,
-        "hint": "Resembling iron, as in taste. Wood."
+        "letterCount": 7
       },
       {
-        "original": "RADIOUS",
-        "scrambled": "RIADUOS",
+        "original": "CANINES",
+        "scrambled": "NISNCEA",
         "anagrams": [
-          "SAUROID"
+          "ENCINAS"
         ],
-        "letterCount": 7,
-        "hint": "1. Consisting of rays, and light. [R.] Berkeley. 2. Radiating; radiant. [Obs.] G"
+        "letterCount": 7
       }
     ],
     "count": 5,
     "difficulty": "medium",
-    "html": "<html><head><title>Anagram Puzzle</title><style>body {font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: 0 auto;}h1 {text-align: center;}.puzzle {background: #f5f5f5; padding: 25px; margin: 20px 0; border-radius: 10px;}.scrambled {font-size: 32px; font-weight: bold; letter-spacing: 8px; color: #9C27B0; text-align: center; margin: 15px 0;}.letters {display: flex; justify-content: center; gap: 5px; margin: 15px 0;}.letter {width: 40px; height: 40px; background: #fff; border: 2px solid #9C27B0; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;}.hint {font-size: 14px; color: #666; font-style: italic; margin-top: 15px;}.info {font-size: 12px; color: #999; margin-top: 10px;}.answer-area {margin-top: 15px; padding: 10px; border: 2px dashed #ccc; border-radius: 5px; min-height: 30px;}</style></head><body><h1>Anagram Puzzle</h1><p style='text-align:center;'>Rearrange the letters to form a word</p><div class='puzzle'><div class='info'>#1 - 6 letters</div><div class='letters'><div class='letter'>T</div><div class='letter'>I</div><div class='letter'>A</div><div class='letter'>G</div><div class='letter'>L</div><div class='letter'>O</div></div><div class='hint'>Hint: A strap for tightening a saddle girth. [Western U. S. & Sp. Amer.]...</div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div><div class='puzzle'><div class='info'>#2 - 6 letters</div><div class='letters'><div class='letter'>I</div><div class='letter'>A</div><div class='letter'>T</div><div class='letter'>R</div><div class='letter'>N</div><div class='letter'>S</div></div><div class='hint'>Hint: To stud as with stars. [R.] 'A golden throne instarred with gems.' J. Barlow....</div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div><div class='puzzle'><div class='info'>#3 - 6 letters</div><div class='letters'><div class='letter'>S</div><div class='letter'>I</div><div class='letter'>R</div><div class='letter'>A</div><div class='letter'>W</div><div class='letter'>H</div></div><div class='hint'>Hint: To protect from the effects of; hence, to cure; to heal. [Obs.] My brother shall...</div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div><div class='puzzle'><div class='info'>#4 - 7 letters</div><div class='letters'><div class='letter'>I</div><div class='letter'>N</div><div class='letter'>O</div><div class='letter'>R</div><div class='letter'>H</div><div class='letter'>I</div><div class='letter'>S</div></div><div class='hint'>Hint: Resembling iron, as in taste. Wood....</div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div><div class='puzzle'><div class='info'>#5 - 7 letters</div><div class='letters'><div class='letter'>R</div><div class='letter'>I</div><div class='letter'>A</div><div class='letter'>D</div><div class='letter'>U</div><div class='letter'>O</div><div class='letter'>S</div></div><div class='hint'>Hint: 1. Consisting of rays, and light. [R.] Berkeley. 2. Radiating; radiant. [Obs.] G...</div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div></body></html>"
+    "html": "<html><head><title>Anagram Puzzle</title><style>body {font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: 0 auto;}h1 {text-align: center;}.puzzle {background: #f5f5f5; padding: 25px; margin: 20px 0; border-radius: 10px;}.scrambled {font-size: 32px; font-weight: bold; letter-spacing: 8px; color: #9C27B0; text-align: center; margin: 15px 0;}.letters {display: flex; justify-content: center; gap: 5px; margin: 15px 0;}.letter {width: 40px; height: 40px; background: #fff; border: 2px solid #9C27B0; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;}.hint {font-size: 14px; color: #666; font-style: italic; margin-top: 15px;}.info {font-size: 12px; color: #999; margin-top: 10px;}.answer-area {margin-top: 15px; padding: 10px; border: 2px dashed #ccc; border-radius: 5px; min-height: 30px;}</style></head><body><h1>Anagram Puzzle</h1><p style='text-align:center;'>Rearrange the letters to form a word</p><div class='puzzle'><div class='info'>#1 - 7 letters</div><div class='letters'><div class='letter'>P</div><div class='letter'>D</div><div class='letter'>A</div><div class='letter'>I</div><div class='letter'>S</div><div class='letter'>R</div><div class='letter'>E</div></div><div class='answer-area'></div><div class='info'>Bonus: This word has 2 anagram(s)!</div></div><div class='puzzle'><div class='info'>#2 - 6 letters</div><div class='letters'><div class='letter'>R</div><div class='letter'>S</div><div class='letter'>G</div><div class='letter'>E</div><div class='letter'>T</div><div class='letter'>A</div></div><div class='answer-area'></div><div class='info'>Bonus: This word has 3 anagram(s)!</div></div><div class='puzzle'><div class='info'>#3 - 6 letters</div><div class='letters'><div class='letter'>S</div><div class='letter'>O</div><div class='letter'>G</div><div class='letter'>N</div><div class='letter'>R</div><div class='letter'>A</div></div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div><div class='puzzle'><div class='info'>#4 - 7 letters</div><div class='letters'><div class='letter'>A</div><div class='letter'>B</div><div class='letter'>E</div><div class='letter'>R</div><div class='letter'>E</div><div class='letter'>G</div><div class='letter'>S</div></div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div><div class='puzzle'><div class='info'>#5 - 7 letters</div><div class='letters'><div class='letter'>N</div><div class='letter'>I</div><div class='letter'>S</div><div class='letter'>N</div><div class='letter'>C</div><div class='letter'>E</div><div class='letter'>A</div></div><div class='answer-area'></div><div class='info'>Bonus: This word has 1 anagram(s)!</div></div></body></html>",
+    "image": {
+      "imageName": "d52a76c7-fe99-498f-b616-ab376cc920a5_anagram.png",
+      "format": ".png",
+      "downloadURL": "https://storage.googleapis.com/apiverve/APIData/anagrampuzzle/d52a76c7-fe99-498f-b616-ab376cc920a5_anagram.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766009991&Signature=cHugsZLx%2BpnY0TrRpTdO%2Bfh48%2Bw8E1zzZt3SNLI2dNgM%2BZj%2FiC%2FZZjvoyahZdBlBkz6pHxuLRX55%2FLszTxTxyhNLJzUcjDOCjoATtWKevbzyLmwaEyFXLDjdzikxUWjVt9g8MyiPEKSFK6%2BpgY6WCvvSeI%2Fox%2B6lQawatWFMB7k0OKSTr9FO%2Fhqqu5M4%2B37bW0zvBuNtcORufXKayE7Z2KcW%2F2wkk9YwGXrVIvn2xLcOYjdY49GAQ2HW0qxRHLDtYYMY6T32jKz1KC6KBLZzrji7v3N%2FVkxfbECzXNgZB5WcCisCoHrUyj7BO14lLr7ZC4XttlYe70ak4QTqa3qNCw%3D%3D",
+      "expires": 1766009991438
+    }
   }
 }
 ```
 
 ## API Reference
 
-- **API Home:** [Anagram Puzzle Generator API](https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/anagrampuzzle](https://docs.apiverve.com/ref/anagrampuzzle?utm_source=dart&utm_medium=readme)
+- **API Home:** [Anagram Puzzle Generator API](https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/anagrampuzzle](https://docs.apiverve.com/ref/anagrampuzzle?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -123,4 +128,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)

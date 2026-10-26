@@ -46,12 +46,13 @@ final _formatPatterns = {
 
 /// Anagram Puzzle Generator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [word] - Specific word to create anagram for
+/// * [word] - Specific word to create anagram for [maxLength: 60]
 /// * [count] - Number of puzzles [min: 1, max: 20]
 /// * [difficulty] - Difficulty level
+/// * [image] - Set to true to generate a downloadable puzzle image
 class AnagrampuzzleClient {
   final String apiKey;
   final String baseUrl;
@@ -59,9 +60,10 @@ class AnagrampuzzleClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'word': ValidationRule(type: 'string', required: false),
+    'word': ValidationRule(type: 'string', required: false, maxLength: 60),
     'count': ValidationRule(type: 'integer', required: false, min: 1, max: 20),
     'difficulty': ValidationRule(type: 'string', required: false),
+    'image': ValidationRule(type: 'boolean', required: false),
   };
 
   AnagrampuzzleClient(this.apiKey, {
