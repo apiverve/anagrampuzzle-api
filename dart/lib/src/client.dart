@@ -49,7 +49,7 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/anagrampuzzle?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [word] - Specific word to create anagram for [maxLength: 60]
+/// * [word] - Specific word to create anagram for (letters a-z only; accents are folded, digits, spaces and symbols return 400) [maxLength: 60]
 /// * [count] - Number of puzzles [min: 1, max: 20]
 /// * [difficulty] - Difficulty level
 /// * [image] - Set to true to generate a downloadable puzzle image
