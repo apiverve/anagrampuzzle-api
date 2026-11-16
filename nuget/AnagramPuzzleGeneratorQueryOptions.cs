@@ -11,7 +11,7 @@ namespace APIVerve.API.AnagramPuzzleGenerator
     public class AnagramPuzzleGeneratorQueryOptions
     {
         /// <summary>
-        /// Specific word to create anagram for
+        /// Specific word to create anagram for (letters a-z only; accents are folded, digits, spaces and symbols return 400)
         /// </summary>
         [JsonProperty("word")]
         public string Word { get; set; }
