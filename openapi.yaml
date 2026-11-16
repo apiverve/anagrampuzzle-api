@@ -27,7 +27,9 @@ paths:
           schema:
             type: string
           required: false
-          description: Specific word to create anagram for
+          description: >-
+            Specific word to create anagram for (letters a-z only; accents are
+            folded, digits, spaces and symbols return 400)
           example: listen
         - name: count
           in: query
